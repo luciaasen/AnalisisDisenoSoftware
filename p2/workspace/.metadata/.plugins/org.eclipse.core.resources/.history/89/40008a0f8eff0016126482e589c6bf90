@@ -1,0 +1,60 @@
+package eps.uam.ads.p2.autoescuela.persona;
+import eps.uam.ads.p2.autoescuela.historico.Historico;
+import eps.uam.ads.p2.autoescuela.Autoescuela;
+import eps.uam.ads.p2.autoescuela.fecha.Fecha;
+
+
+public class Profesor extends Persona{
+	private String numSS;
+	private Historico[] hist;
+	private Autoescuela autoActual;
+	
+	public Profesor(int dni, String nombre, String apellidos, int telefono, String numSS){
+		super(dni, nombre, apellidos, telefono);
+		this.numSS = numSS;
+		this.autoActual = null;
+		this.hist = null;
+	}
+	
+	public void primerTrabajo(Autoescuela a, Fecha actual){
+		this.hist = new Historico[100];
+		this.autoActual = a;
+		this.hist[0] = new Historico(a, actual);
+		return;
+	}
+	
+	public void cambiaAutoescuela(Autoescuela a, Fecha actual){
+		this.autoActual = a;
+		int i;
+		for(i = 0; this.hist[i] != null; i++);
+		(this.hist[i - 1]).setEnd(actual);
+		this.hist[i] = new Historico(a, actual);
+	}
+	
+	public String getNumSS(){
+		return this.numSS;
+	}
+	
+	public Autoescuela getAutoActual(){
+		return this.autoActual;
+	}
+	
+	public void setAutoActual(Autoescuela a){
+		this.autoActual = a;
+		return;
+	}
+	
+	public Fecha[] getAntiguedad(Autoescuela a){
+		int i;
+		Fecha[] f = {null, null};
+		for (i = 0; i < this.hist.length; i++){
+			if (((this.hist[i]).getAutoescuela()).equals(a)){
+				f[0] = (this.hist[i]).getIni();
+				f[1] = (this.hist[i]).getEnd();
+				return f;
+			}
+		}
+		return f;
+	}
+		
+}

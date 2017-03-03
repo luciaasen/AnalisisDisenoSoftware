@@ -1,0 +1,29 @@
+package eps.uam.ads.p2.autoescuela.persona;
+import eps.uam.ads.p2.autoescuela.historico.Historico;
+import eps.uam.ads.p2.autoescuela.Autoescuela;
+import eps.uam.ads.p2.autoescuela.fecha.Fecha;
+
+
+public class Profesor extends Persona{
+	private String numSS;
+	private Historico[] hist;
+	private Autoescuela autoActual;
+	
+	public Profesor(int dni, String nombre, String apellidos, int telefono, String numSS){
+		super(dni, nombre, apellidos, telefono);
+		this.numSS = numSS;
+	}
+	
+	public String getNumSS(){
+		return this.numSS;
+	}
+	
+	public Autoescuela getAutoActual(){
+		return this.autoActual;
+	}
+	
+	public Fecha getAntiguedad(Autoescuela a){
+		
+	}
+		
+}

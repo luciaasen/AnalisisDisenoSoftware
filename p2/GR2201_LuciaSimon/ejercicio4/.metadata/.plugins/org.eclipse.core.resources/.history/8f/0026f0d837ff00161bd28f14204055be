@@ -1,0 +1,65 @@
+package eps.uam.ads.p2.autoescuela.fecha;
+
+public class Fecha{
+
+    private int mDia;
+    private int mMes;
+    private int mAnyo;
+
+    //Constructor
+    public Fecha(int dia, int mes, int anyo) {
+        mDia = dia;
+        mMes = mes;
+        mAnyo = anyo;
+    }
+
+    int getDiaDeFecha(){
+        return mDia;
+    }
+
+    private void setDiaFecha(int cdia){
+        mDia = cdia;
+    }
+
+    private int getMesDeFecha(){
+        return mMes;
+    }
+
+    private void setMesFecha(int cmes){
+        mMes = cmes;
+    }
+
+    private int getAnyoDeFecha(){
+        return mAnyo;
+    }
+
+    private void setAnyoFecha(int canyo){
+        mAnyo = canyo;
+    }
+
+    public String getFecha(){
+        String date = getDiaDeFecha() + "/" + getMesDeFecha() + "/" + getAnyoDeFecha();
+        return date;
+    }
+
+
+
+    public void setFecha(int dia, int mes, int anyo){
+        setDiaFecha(dia);
+        setMesFecha(mes);
+        setAnyoFecha(anyo);
+    }
+
+
+    public boolean isFechaValida(){
+        int dia = getDiaDeFecha();
+        int mes = getMesDeFecha();
+        int anyo = getAnyoDeFecha();
+
+        if(dia >= 1 && dia <= 31 && mes >= 1 && mes <= 12 && anyo > 0)
+            return true;
+        return false;
+
+    }
+
+}

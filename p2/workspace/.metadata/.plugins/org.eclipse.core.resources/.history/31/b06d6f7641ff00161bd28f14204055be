@@ -1,0 +1,38 @@
+package eps.uam.ads.p2.autoescuela.historico;
+import eps.uam.ads.p2.autoescuela.fecha.Fecha;
+import eps.uam.ads.p2.autoescuela.Autoescuela;
+import eps.uam.ads.p2.autoescuela.persona.Profesor;
+
+public class Historico {
+	private Autoescuela autoescuela;
+	private Fecha fechaIni;
+	private Fecha fechaEnd;
+	
+	public Historico(Autoescuela a, Fecha ini){
+		this.autoescuela = a;
+		this.fechaIni = ini;
+		this.fechaEnd = null;
+	}
+	
+	public Fecha getIni(){
+		return this.fechaIni;
+	}
+	
+	public Fecha getEnd(){
+		return this.fechaEnd;
+	}
+	
+	public void setEnd(Fecha end){
+		this.fechaEnd = end;
+		return;
+	}
+	
+	public Autoescuela getAutoescuela(){
+		return this.autoescuela;
+	}
+	
+	public boolean AreFechasValidas(){
+		return fechaIni.masAntiguaQue(fechaEnd);
+	}
+	
+}

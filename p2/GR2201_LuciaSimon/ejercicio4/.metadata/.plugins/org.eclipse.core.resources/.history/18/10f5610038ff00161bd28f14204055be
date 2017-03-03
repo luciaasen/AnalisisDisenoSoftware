@@ -1,0 +1,87 @@
+package eps.uam.ads.p2.autoescuela.fecha;
+
+public class Fecha{
+
+    private int mDia;
+    private int mMes;
+    private int mAnyo;
+
+    //Constructor
+    public Fecha(int dia, int mes, int anyo) {
+        mDia = dia;
+        mMes = mes;
+        mAnyo = anyo;
+    }
+
+    public int getDiaDeFecha(){
+        return mDia;
+    }
+
+    private void setDiaFecha(int cdia){
+        mDia = cdia;
+    }
+
+    public int getMesDeFecha(){
+        return mMes;
+    }
+
+    private void setMesFecha(int cmes){
+        mMes = cmes;
+    }
+
+    public int getAnyoDeFecha(){
+        return mAnyo;
+    }
+
+    private void setAnyoFecha(int canyo){
+        mAnyo = canyo;
+    }
+
+    public String getFecha(){
+        String date = getDiaDeFecha() + "/" + getMesDeFecha() + "/" + getAnyoDeFecha();
+        return date;
+    }
+
+
+
+    public void setFecha(int dia, int mes, int anyo){
+        setDiaFecha(dia);
+        setMesFecha(mes);
+        setAnyoFecha(anyo);
+    }
+
+
+    public boolean isFechaValida(){
+        int dia = getDiaDeFecha();
+        int mes = getMesDeFecha();
+        int anyo = getAnyoDeFecha();
+
+        if(dia >= 1 && dia <= 31 && mes >= 1 && mes <= 12 && anyo > 0)
+            return true;
+        return false;
+
+    }
+    
+    
+    //Devuelve true si  this < f 
+    public boolean masAntiguaQue(Fecha f){
+    	if (this.anyo < f.anyo){
+    		return true;
+    	}else if(this.anyo > f.anyo){
+    		return false;
+    	}else{
+    		if (this.mes < f.mes){
+    			return true;
+    		}else if(this.mes > f.mes){
+    			return false;
+    		}else{
+    			if(this.dia < f.dia){
+    				return true;
+    			}else{
+    				return false;
+    			}
+    		}
+    	}
+    }
+
+}

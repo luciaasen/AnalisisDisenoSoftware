@@ -1,0 +1,16 @@
+package eps.uam.ads.p2.autoescuela.tester;
+import eps.uam.ads.p2.autoescuela.fecha.Fecha;
+import eps.uam.ads.p2.autoescuela.Autoescuela;
+import eps.uam.ads.p2.autoescuela.historico.Historico;
+import eps.uam.ads.p2.autoescuela.persona.Profesor;
+
+
+
+
+public class Test {
+	public static void main(String[] args){
+		Autoescuela a1 = new Autoescuela(001, "Calle Cuchara nº2, Madrid", "Pepe");
+		Autoescuela a2 = new Autoescuela(002, "Calle Tenedor nº2, Madrid", "Luis");
+		Autoescuela a3 = new Autoescuela(003, "Calle Cuchillo nº2, Madrid", "Javier");
+	}
+}

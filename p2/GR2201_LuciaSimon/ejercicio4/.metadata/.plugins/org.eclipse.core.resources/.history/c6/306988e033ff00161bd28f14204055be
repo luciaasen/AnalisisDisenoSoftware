@@ -1,0 +1,14 @@
+
+
+package eps.uam.ads.p2.autoescuela.persona;
+
+public class Profesor extends Persona{
+	private String numSS;
+	private int antiguedad;
+	
+	public Profesor(int dni, String nombre, String apellidos, int telefono, String numSS){
+		super(dni, nombre, apellidos, telefono);
+		this.numSS = numSS;
+		this.antiguedad = 0;
+	}
+}

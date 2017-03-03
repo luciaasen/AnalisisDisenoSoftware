@@ -1,0 +1,30 @@
+package eps.uam.ads.p2.autoescuela.tester;
+import eps.uam.ads.p2.autoescuela.fecha.Fecha;
+import eps.uam.ads.p2.autoescuela.Autoescuela;
+import eps.uam.ads.p2.autoescuela.persona.Profesor;
+
+
+
+
+public class Test {
+	public static void main(String[] args){
+		Autoescuela a1 = new Autoescuela(001, "Calle Cuchara nº2, Madrid", "Pepe");
+		Autoescuela a2 = new Autoescuela(002, "Calle Tenedor nº2, Madrid", "Luis");
+		Autoescuela a3 = new Autoescuela(003, "Calle Cuchillo nº2, Madrid", "Javier");
+		Profesor p1 = new Profesor(12345, "Pedro", "Gomez", 675453267, "237856");
+		Fecha f1 = new Fecha(5, 5, 2005);
+		Fecha f2 = new Fecha(6, 6, 2006);
+		Fecha f3 = new Fecha(7, 7, 2007);
+		Fecha[] fechas = new Fecha[2];
+		String s = "";
+		p1.primerTrabajo(a1, f1);
+		p1.cambiaAutoescuela(a2, f2);
+		p1.cambiaAutoescuela(a3, f3);
+		fechas = p1.getAntiguedad(a1);
+		s = s + "El profesor " + p1.getNombreYApellidos() + " trabajo en la autoescuela " + a1.getCodigo() + " desde ";
+		s = s + fechas[0].getFecha() + " hasta " + fechas[1].getFecha() + ".\n";
+		
+		System.out.print(s);
+		return;
+	}
+}

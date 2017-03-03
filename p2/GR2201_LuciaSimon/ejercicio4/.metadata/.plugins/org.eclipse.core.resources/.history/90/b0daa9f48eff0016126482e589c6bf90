@@ -1,0 +1,25 @@
+package eps.uam.ads.p2.autoescuela;
+
+public class Autoescuela {
+	private int codigo;
+	private String direccion;
+	private String encargado;
+	
+	public Autoescuela(int codigo, String direccion, String encargado){
+		this.codigo = codigo;
+		this.direccion = direccion;
+		this.encargado = encargado;
+	}
+	
+	public int getCodigo(){
+		return this.codigo;
+	}
+	
+	public String getDireccion(){
+		return this.direccion;
+	}
+	
+	public String getEncargado(){
+		return this.encargado;
+	}
+}

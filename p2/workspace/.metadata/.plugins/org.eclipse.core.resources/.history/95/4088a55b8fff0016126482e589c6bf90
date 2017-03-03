@@ -1,0 +1,44 @@
+package eps.uam.ads.p2.autoescuela.persona;
+
+public abstract class Persona {
+	 private int mDni;
+	 private String mNombre;
+	 private String mApellidos;
+	 private int mTelefono;
+	 
+	 public Persona(int dni, String nombre, String apellidos, int telefono) {
+	        mDni = dni;
+	        mNombre = nombre;
+	        mApellidos = apellidos;
+	        mTelefono = telefono;
+	       
+	  }
+	
+	  public int getDni(){
+	        return mDni;
+	  }
+	
+	  public int getTelefono(){
+	        return mTelefono;
+	  }
+	
+	  public void setTelefono(int telefono){
+	        this.mTelefono = telefono;
+	  }
+	    
+	
+	  public String getNombreYApellidos() {
+	       String nombreYApellido = mNombre + " " + mApellidos;
+	       return nombreYApellido;
+	  }
+	  
+	  public String toString(){
+	        String s = "<mDni: " + getDni() + "> \n" +
+	                "	Nombre y mApellidos: " + getNombreYApellidos() + "\n"+
+	                "	Telefono: " + getTelefono() + "\n";
+
+	        return s;
+	  }
+	    
+	 
+}

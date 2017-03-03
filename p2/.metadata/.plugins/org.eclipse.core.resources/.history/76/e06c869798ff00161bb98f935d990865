@@ -1,0 +1,5 @@
+package eps.uam.ads.p2.autoescuela;
+
+public class Alumno {
+
+}

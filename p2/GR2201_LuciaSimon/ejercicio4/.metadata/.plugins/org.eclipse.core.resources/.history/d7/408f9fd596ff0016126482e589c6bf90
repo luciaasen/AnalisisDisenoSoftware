@@ -1,0 +1,127 @@
+/**
+ * @author lucia asencio
+ */
+package eps.uam.ads.p2.autoescuela.persona;
+import eps.uam.ads.p2.autoescuela.historico.Historico;
+import eps.uam.ads.p2.autoescuela.Autoescuela;
+import eps.uam.ads.p2.autoescuela.fecha.Fecha;
+
+/**
+ * Clase para profesor de autoescuela
+ * @author lucia
+ *
+ */
+public class Profesor extends Persona{
+	private String numSS;
+	private Historico[] hist;
+	private Autoescuela autoActual;
+	
+	/**
+	 * funcion constructora de profesor
+	 * @param dni 
+	 * @param nombre
+	 * @param apellidos
+	 * @param telefono
+	 * @param numSS
+	 */
+	public Profesor(int dni, String nombre, String apellidos, int telefono, String numSS){
+		super(dni, nombre, apellidos, telefono);
+		this.numSS = numSS;
+		this.autoActual = null;
+		this.hist = null;
+	}
+	
+	/**
+	 * funcion para inicializar el primer trabajo de un profesor de la autoescuela
+	 * @param a
+	 * @param actual
+	 */
+	public void primerTrabajo(Autoescuela a, Fecha actual){
+		this.hist = new Historico[100];
+		this.autoActual = a;
+		this.hist[0] = new Historico(a, actual);
+		return;
+	}
+	
+	/**
+	 * funcion para cambiar profesor entre autoescuelas de la cadena
+	 * @param a
+	 * @param actual
+	 */
+	public void cambiaAutoescuela(Autoescuela a, Fecha actual){
+		this.autoActual = a;
+		int i;
+		for(i = 0; this.hist[i] != null; i++);
+		(this.hist[i - 1]).setEnd(actual);
+		this.hist[i] = new Historico(a, actual);
+	}
+	
+	/**
+	 * funcion getter del numero de seguridad social del profesor
+	 * @return numero seguridad social
+	 */
+	public String getNumSS(){
+		return this.numSS;
+	}
+	
+	/**
+	 * funcion getter de la autoescuela actual del profesor
+	 * @return autoescuela
+	 */
+	public Autoescuela getAutoActual(){
+		return this.autoActual;
+	}
+	
+	/**
+	 * funcion setter para la autoescuela actual
+	 * @param a
+	 */
+	public void setAutoActual(Autoescuela a){
+		this.autoActual = a;
+		return;
+	}
+	
+	/**
+	 * funcion para saber la antiguedad de un profesor en una autoescuela
+	 * @param a
+	 * @return fechas de inicio y fin del profesor en la autoescuela
+	 */
+	public Fecha[] getAntiguedad(Autoescuela a){
+		int i;
+		Fecha[] f = {null, null};
+		for (i = 0; i < this.hist.length; i++){
+			if (((this.hist[i]).getAutoescuela()).equals(a)){
+				f[0] = (this.hist[i]).getIni();
+				f[1] = (this.hist[i]).getEnd();
+				return f;
+			}
+		}
+		return f;
+	}
+	
+	/**
+	 * funcion para imprimir una frase acerca de la antiguedad del profesor en la autoescuela
+	 * @param a
+	 */
+	public void printAntiguedad(Autoescuela a){
+		String s = "";
+		Fecha[] fechas = this.getAntiguedad(a);
+		if (fechas [1] == null){
+			if (fechas[0] == null){
+				System.out.println("El profesor " + this.getNombreYApellidos() + "no trabajo en la autoescuela " + a.getCodigo());
+			}else{
+				System.out.println("El profesor " + this.getNombreYApellidos() + "trabaja en la autoescuela " + a.getCodigo() + " desde " + fechas[0].getFecha());
+			}
+		}else{
+			if(fechas[0] == null){
+				System.out.println("Error, existe fecha de inicio pero no de fin.");
+			}else{
+				s = s + "El profesor " + this.getNombreYApellidos() + " trabajo en la autoescuela " + a.getCodigo() + " desde ";
+				s = s + fechas[0].getFecha() + " hasta " + fechas[1].getFecha();
+				System.out.println(s);
+			}
+		}
+		return;
+		
+	}
+}
