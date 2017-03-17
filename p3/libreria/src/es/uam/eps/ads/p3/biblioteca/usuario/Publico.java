@@ -34,6 +34,10 @@ public class Publico extends Usuario{
 	 * Si la devolucion se hace a tiempo, se recalcula los ppb y los ps. Si no, se sanciona
 	 * @param prestamo
 	 */
+	
+	/*SIMON, en realidad este eliminar prestamo no deberia existir (se ejecuta el el padre).
+	 * Este codigo te sirve para la funcion DEVOLVER, creo que hace lo que le toca a esa funcion. Not sure,
+	 * te lo dejo por si acaso.*/
 	public void eliminarPrestamo(Prestamo prestamo){
 		if (FechaSimulada.getHoy().isBefore(prestamo.getVencimiento()) || FechaSimulada.getHoy().isEqual(prestamo.getVencimiento())){
 			this.ppb ++;
@@ -48,6 +52,7 @@ public class Publico extends Usuario{
 		}
 		super.eliminarPrestamo(prestamo);
 	}
+	
 
 	/**
 	 * Decrementa en 'dias' el numero de prestamos para bonificacion del publico, sin dejarlo bajo cero.

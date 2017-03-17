@@ -55,6 +55,9 @@ public abstract class Usuario {
 		return;
 	}
 	
+	/**
+	 * Pone el acumulador de sanciones a cero
+	 */
 	public void eliminarSancion(){
 		return;
 	}

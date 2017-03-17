@@ -1,5 +1,9 @@
 package es.uam.eps.ads.p3.biblioteca.usuario;
 
+import java.time.temporal.ChronoUnit;
+
+import es.uam.eps.ads.p3.biblioteca.fechasimulada.FechaSimulada;
+
 public class Empleado extends Usuario{
 
 	private double sancion;
@@ -27,7 +31,9 @@ public class Empleado extends Usuario{
 			super.anyadirPrestamo(prestamo);
 		}
 	}
-		
+	
+
+	
 	/**
 	 * Aniade a la sancion previa la correspondiente a dias
 	 * @param dias

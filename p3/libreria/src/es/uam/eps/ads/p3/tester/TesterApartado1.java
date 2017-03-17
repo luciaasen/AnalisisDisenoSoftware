@@ -26,7 +26,7 @@ public class TesterApartado1 {
     // el plazo de prestamo de la obra 1 sigue siendo el inicial, pero BAJA tras 20 pr�stamos m�s
     System.out.println(obra1); 
     for (int i = 1; i <= 20; i++) { 
-    	 u1.anyadirPrestamo(pf);  u1.eliminarPrestamo(pf); System.out.println(u1); 
+    	 u1.anyadirPrestamo(pf);  u1.eliminarPrestamo(pf); 
     }
     System.out.println(obra1);
     
