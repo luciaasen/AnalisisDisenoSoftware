@@ -51,16 +51,12 @@ public abstract class Usuario {
 	}
 
 	
-	public void sancionarPorRetraso(int dias){
-		return;
-	}
+	public abstract void sancionarPorRetraso(int dias);
 	
 	/**
 	 * Pone el acumulador de sanciones a cero
 	 */
-	public void eliminarSancion(){
-		return;
-	}
+	public abstract void eliminarSancion();
 	
 	/**
 	 * Devuelve String con la informacion del usuario
