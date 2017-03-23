@@ -1,0 +1,85 @@
+AdSof P3
+Simon Valcarcerl y Lucia Asencio
+
+
+SALIDAS 1
+P: Ramon, ppb: 0, ps: 2
+E: Marta
+L: La Caverna, de Saramago (2000) plazo: 25
+P: Atame, de Almodovar (1990) plazo: 2
+P: Ramon, ppb: 0, ps: 2
+P: Ramon, ppb: 1, ps: 2
+P: Ramon, ppb: 2, ps: 2
+P: Ramon, ppb: 1, ps: 3
+P: Ramon, ppb: 2, ps: 3
+L: La Caverna, de Saramago (2000) plazo: 25
+L: La Caverna, de Saramago (2000) plazo: 23
+P: Ramon, ppb: 2, ps: 2
+E: Marta
+E: Marta. Sancion acumulada: 25.0
+E: Marta. Sancion acumulada: 25.0
+E: Marta. Sancion acumulada: 37.5
+E: Marta
+
+
+
+SALIDAS 2
+u2.equals(u3): false
+u4.equals(u5): true
+obra3.equals(obra4): true
+e23.equals(e14): false
+
+
+
+SALIDAS 3
+{1[L: La Caverna, de Saramago (2000) plazo: 25](disponible)} 
+{10[L: Crepusculo, de Meyer (2011) plazo: 25](disponible)} 
+{1[L: La Caverna, de Saramago (2000) plazo: 25](Prestado)} prestado a [P: Ramon, ppb: 1, ps: 2] hasta 2017-03-26
+{4[P: Atame, de Almodovar (1990) plazo: 2](Prestado)} prestado a [P: Ramon, ppb: 2, ps: 2] hasta 2017-03-03
+null
+{7[L: Crepusculo, de Meyer (2008) plazo: 25](Prestado)} prestado a [E: Marta] hasta 2017-03-26
+{2[L: La Caverna, de Saramago (2000) plazo: 25](Prestado)} prestado a [E: Marta] hasta 2017-03-26
+{5[P: Atame, de Almodovar (1990) plazo: 2](Prestado)} prestado a [E: Marta] hasta 2017-03-03
+null
+{8[L: Crepusculo, de Meyer (2008) plazo: 25](Prestado)} prestado a [P: Ana, ppb: 1, ps: 2] hasta 2017-03-26
+null
+null
+{9[L: Crepusculo, de Meyer (2008) plazo: 25](Prestado)} prestado a [P: Ana, ppb: 1, ps: 2] hasta 2017-03-26
+
+Fecha simulada: 2017-03-04
+{5[P: Atame, de Almodovar (1990) plazo: 2](Prestado)} prestado a [P: Ramon, ppb: 1, ps: 3] hasta 2017-03-06
+
+Pr�stamos actuales de P: Ramon, ppb: 1, ps: 3
+[{1[L: La Caverna, de Saramago (2000) plazo: 25](Prestado)} prestado a [P: Ramon, ppb: 1, ps: 3] hasta 2017-03-26, {5[P: Atame, de Almodovar (1990) plazo: 2](Prestado)} prestado a [P: Ramon, ppb: 1, ps: 3] hasta 2017-03-06]
+Num. prestamos realizados: 8
+Num. prestamos pendientes: 5
+
+
+
+SALIDAS 4
+Vencen hoy 2017-03-03
+[{4[P: Atame, de Almodovar (1990) plazo: 2](Prestado)} prestado a [E: Marta] hasta 2017-03-03]
+
+Vencen hoy 2017-03-26
+[{1[L: La Caverna, de Saramago (2000) plazo: 25](Prestado)} prestado a [P: Ramon, ppb: 2, ps: 2] hasta 2017-03-26, {7[L: Crepusculo, de Meyer (2008) plazo: 25](Prestado)} prestado a [P: Ramon, ppb: 2, ps: 2] hasta 2017-03-26]
+
+Pasados de vencimiento 2017-03-26
+[{4[P: Atame, de Almodovar (1990) plazo: 2](Prestado)} prestado a [E: Marta] hasta 2017-03-03]
+
+Pasados de vencimiento 2017-03-27
+{1[L: La Caverna, de Saramago (2000) plazo: 25](Prestado)} prestado a [P: Ramon, ppb: 2, ps: 2] hasta 2017-03-26
+{4[P: Atame, de Almodovar (1990) plazo: 2](Prestado)} prestado a [E: Marta] hasta 2017-03-03
+{7[L: Crepusculo, de Meyer (2008) plazo: 25](Prestado)} prestado a [P: Ramon, ppb: 2, ps: 2] hasta 2017-03-26
+-----
+
+Pasados de vencimiento 2017-03-30
+{1[L: La Caverna, de Saramago (2000) plazo: 25](disponible)} prestado a [P: Ramon, ppb: 0, ps: 2] hasta 2017-03-26
+{4[P: Atame, de Almodovar (1990) plazo: 2](disponible)} prestado a [E: Marta] hasta 2017-03-03
+{7[L: Crepusculo, de Meyer (2008) plazo: 25](disponible)} prestado a [P: Ramon, ppb: 0, ps: 2] hasta 2017-03-26
+{2[L: La Caverna, de Saramago (2000) plazo: 25](disponible)} prestado a [E: Marta] hasta 2017-03-28
+
+Ya no debe haber pr�stamos pasados de vencimiento 
+[]
+
+
+
