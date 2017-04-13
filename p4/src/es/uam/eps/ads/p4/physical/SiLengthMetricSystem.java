@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import es.uam.eps.ads.p4.IPhysicalUnit;
+import es.uam.eps.ads.p4.physical.*;
 
 public class SiLengthMetricSystem extends SiMetricSystem{
 	
