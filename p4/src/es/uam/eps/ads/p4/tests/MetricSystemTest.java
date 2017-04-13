@@ -1,5 +1,6 @@
 package es.uam.eps.ads.p4.tests;
 
+import es.uam.eps.ads.p4.*;
 import es.uam.eps.ads.p4.physical.*;
 
 public class MetricSystemTest {

@@ -3,6 +3,7 @@
  */
 package es.uam.eps.ads.p4.physical;
 
+import es.uam.eps.ads.p4.IMetricSystem;
 import es.uam.eps.ads.p4.IPhysicalUnit;
 import es.uam.eps.ads.p4.physical.Quantity;
 import es.uam.eps.ads.p4.exc.QuantityException;

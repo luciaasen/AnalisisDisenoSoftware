@@ -1,7 +1,7 @@
 /**
  * 
  */
-package es.uam.eps.ads.p4.physical;
+package es.uam.eps.ads.p4;
 
 import java.util.*;
 import es.uam.eps.ads.p4.IPhysicalUnit;

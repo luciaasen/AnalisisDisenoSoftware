@@ -4,7 +4,7 @@
 package es.uam.eps.ads.p4;
 
 import es.uam.eps.ads.p4.exc.QuantityException;
-import es.uam.eps.ads.p4.physical.IMetricSystem;
+import es.uam.eps.ads.p4.IMetricSystem;
 import es.uam.eps.ads.p4.physical.Quantity;
 
 /**
