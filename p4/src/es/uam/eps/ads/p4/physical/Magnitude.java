@@ -16,7 +16,7 @@ public class Magnitude implements IMagnitude {
 	@Override
 	public IMagnitude add(IMagnitude m) throws QuantityException {
 		if(this.getUnit().canTransformTo(m.getUnit())){
-			
+			return new Magnitude(this.getValue() + m.transformTo(this.getUnit()).getValue(), this.getUnit());
 		}else{
 			throw new QuantityException(this.getUnit(), m.getUnit());
 		}
@@ -25,7 +25,7 @@ public class Magnitude implements IMagnitude {
 	@Override
 	public IMagnitude subs(IMagnitude m) throws QuantityException {
 		if(this.getUnit().canTransformTo(m.getUnit())){
-			
+			return new Magnitude(this.getValue() - m.transformTo(this.getUnit()).getValue(), this.getUnit());
 		}else{
 			throw new QuantityException(this.getUnit(), m.getUnit());
 		}
