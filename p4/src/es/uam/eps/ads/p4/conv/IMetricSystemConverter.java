@@ -28,7 +28,7 @@ public interface IMetricSystemConverter {
 	 * @param to Unidad Fisica a la que se quiere llegar
 	 * @return IMagnitude: magnitud transformada
 	 * @throws UnknownUnitException En caso de que el parametro to no se reconozca
- * @throws QuantityException En caso de que las cantidades no sean coherentes, ie tiempo y espacio
+	 * @throws QuantityException En caso de que las cantidades no sean coherentes, ie tiempo y espacio
 	 */
 	IMagnitude transformTo(IMagnitude from, IPhysicalUnit to) throws UnknownUnitException, QuantityException;
 	/**

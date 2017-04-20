@@ -10,10 +10,15 @@ import es.uam.eps.ads.p4.IPhysicalUnit;
  *
  */
 public class QuantityException extends Exception {
-	protected IPhysicalUnit from;
-	protected IPhysicalUnit to;
+	private IPhysicalUnit from;
+	private IPhysicalUnit to;
 	
 
+	/**
+	 * Constructor de QuantityException
+	 * @param from unidad desde la que se intenta convertr
+	 * @param to unidad a la que se intenta convertir
+	 */
 	public QuantityException(IPhysicalUnit from, IPhysicalUnit to){
 		this.from = from;
 		this.to = to;
