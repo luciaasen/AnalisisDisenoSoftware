@@ -2,7 +2,7 @@ package es.uam.eps.ads.p4.physical;
 
 import es.uam.eps.ads.p4.*;
 import es.uam.eps.ads.p4.exc.QuantityException;
-import es.uam.eps.ads.p4.exc.QuantityMagnitudeException;
+import es.uam.eps.ads.p4.exc.UnknownUnitException;
 
 public class Magnitude implements IMagnitude {
 	private IPhysicalUnit unit;
@@ -68,10 +68,16 @@ public class Magnitude implements IMagnitude {
 		if(this.getUnit().canTransformTo(c)){
 			return new Magnitude( this.getUnit().transformTo(this.getValue(), c), c);
 		}else if(!(unit.getMetricSystem().getConverter(c.getMetricSystem())==null)){
-			return unit.getMetricSystem().getConverter(c.getMetricSystem()).transformTo(this,  c);
+			try {
+				return unit.getMetricSystem().getConverter(c.getMetricSystem()).transformTo(this,  c);
+			} catch (UnknownUnitException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return null;
+			}
 		}
 		else{
-			throw new QuantityMagnitudeException(this.getUnit(), c);
+			throw new QuantityException(this.getUnit(), c);
 		}
 	}
 	

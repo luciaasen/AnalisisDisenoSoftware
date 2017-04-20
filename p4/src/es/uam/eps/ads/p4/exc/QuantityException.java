@@ -21,6 +21,9 @@ public class QuantityException extends Exception {
 	
 	@Override
 	public String toString(){
+		if(from.getQuantity().equals(to.getQuantity())){
+			return "Cannot convert " +from.abbrev() + " " + from.getQuantity() + " to " + to.abbrev() + " "+ to.getQuantity();
+		}
 		return "Quantities " + this.from.getQuantity() + " and " + this.to.getQuantity() + " are not compatible";
 	}
 }
