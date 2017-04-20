@@ -27,7 +27,7 @@ public class ImperialLengthMetricSystem extends ImperialMetricSystem{
 	 * @return units, una lista con todas las medidas del sistema imperial de longitud
 	 */
 	@Override
-	public Collection<IPhysicalUnit> units(){
+	public ArrayList<IPhysicalUnit> units(){
 		ArrayList<IPhysicalUnit> c = new ArrayList<IPhysicalUnit> ();
 		c.add(ImperialLengthMetricSystem.THOU);
 		c.add(ImperialLengthMetricSystem.FATHOM);

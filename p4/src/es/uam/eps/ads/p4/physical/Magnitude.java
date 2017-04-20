@@ -81,4 +81,8 @@ public class Magnitude implements IMagnitude {
 		return this.unit;
 	}
 
+	@Override
+	public String toString(){
+		return this.value + " [" + this.unit + "]";
+	}
 }

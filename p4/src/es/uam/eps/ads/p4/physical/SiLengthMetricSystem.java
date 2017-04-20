@@ -28,7 +28,7 @@ public class SiLengthMetricSystem extends SiMetricSystem{
 	 * @return units, una lista con todas las medidas del sistema internacional de longitud
 	 */
 	@Override
-	public Collection<IPhysicalUnit> units(){
+	public ArrayList<IPhysicalUnit> units(){
 		ArrayList<IPhysicalUnit> c = new ArrayList<IPhysicalUnit> ();
 		c.add(SiLengthMetricSystem.MILIMETER);
 		c.add(SiLengthMetricSystem.KILOMETER);

@@ -31,7 +31,7 @@ public class SiTimeMetricSystem extends SiMetricSystem{
 	 * @return units, una lista con todas las medidas del sistema internacional de tiempo
 	 */
 	@Override
-	public Collection<IPhysicalUnit> units(){
+	public ArrayList<IPhysicalUnit> units(){
 		ArrayList<IPhysicalUnit> c = new ArrayList<IPhysicalUnit> ();
 		c.add(SiTimeMetricSystem.SECOND);
 		c.add(SiTimeMetricSystem.MILISECOND);
