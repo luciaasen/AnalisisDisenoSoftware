@@ -3,7 +3,10 @@
  */
 package es.uam.eps.ads.p4.physical;
 
+import es.uam.eps.ads.p4.IMetricSystem;
 import es.uam.eps.ads.p4.IPhysicalUnit;
+import es.uam.eps.ads.p4.conv.IMetricSystemConverter;
+
 import java.util.*;
 /**
  * @author lucia
@@ -37,5 +40,12 @@ public class SiTimeMetricSystem extends SiMetricSystem{
 		c.add(SiTimeMetricSystem.MILISECOND);
 		c.add(SiTimeMetricSystem.HOUR);
 		return c;
+	}
+
+
+	@Override
+	public IMetricSystemConverter getConverter(IMetricSystem to) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

@@ -66,6 +66,8 @@ public class Magnitude implements IMagnitude {
 	public IMagnitude transformTo(IPhysicalUnit c) throws QuantityException{
 		if(this.getUnit().canTransformTo(c)){
 			return new Magnitude( this.getUnit().transformTo(this.getValue(), c), c);
+		}else if(!(unit.getMetricSystem().getConverter(c.getMetricSystem())==null)){
+			return unit.getMetricSystem().getConverter(c.getMetricSystem()).transformTo(this,  c);
 		}
 		else{
 			throw new QuantityException(this.getUnit(), c);
