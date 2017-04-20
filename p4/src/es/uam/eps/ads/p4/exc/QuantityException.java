@@ -10,8 +10,8 @@ import es.uam.eps.ads.p4.IPhysicalUnit;
  *
  */
 public class QuantityException extends Exception {
-	private IPhysicalUnit from;
-	private IPhysicalUnit to;
+	protected IPhysicalUnit from;
+	protected IPhysicalUnit to;
 	
 
 	public QuantityException(IPhysicalUnit from, IPhysicalUnit to){

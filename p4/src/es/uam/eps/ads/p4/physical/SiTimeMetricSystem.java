@@ -48,4 +48,11 @@ public class SiTimeMetricSystem extends SiMetricSystem{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+	@Override
+	public void registerReverse(IMetricSystemConverter conv) {
+		// TODO Auto-generated method stub
+		
+	}
 }

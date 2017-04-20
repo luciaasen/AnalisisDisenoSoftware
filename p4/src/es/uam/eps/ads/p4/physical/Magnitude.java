@@ -2,6 +2,7 @@ package es.uam.eps.ads.p4.physical;
 
 import es.uam.eps.ads.p4.*;
 import es.uam.eps.ads.p4.exc.QuantityException;
+import es.uam.eps.ads.p4.exc.QuantityMagnitudeException;
 
 public class Magnitude implements IMagnitude {
 	private IPhysicalUnit unit;
@@ -70,7 +71,7 @@ public class Magnitude implements IMagnitude {
 			return unit.getMetricSystem().getConverter(c.getMetricSystem()).transformTo(this,  c);
 		}
 		else{
-			throw new QuantityException(this.getUnit(), c);
+			throw new QuantityMagnitudeException(this.getUnit(), c);
 		}
 	}
 	
