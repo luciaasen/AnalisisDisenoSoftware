@@ -17,11 +17,19 @@ public class SiTimeMetricSystem extends SiMetricSystem{
 	public static final PhysicalUnit HOUR = new PhysicalUnit("h", Quantity.TIEMPO, 3600, SYSTEM);
 	public static final PhysicalUnit MILISECOND =new PhysicalUnit("ms", Quantity.TIEMPO, 0.001, SYSTEM);
 	
+	/**
+	 * Devuelve la base del sistema metrico internacional de tiempo
+	 * @return segundo, base del si de tiempo
+	 */
 	@Override
 	public PhysicalUnit base(){
 		return SiTimeMetricSystem.SECOND;
 	}
 	
+
+	/**
+	 * @return units, una lista con todas las medidas del sistema internacional de tiempo
+	 */
 	@Override
 	public Collection<IPhysicalUnit> units(){
 		ArrayList<IPhysicalUnit> c = new ArrayList<IPhysicalUnit> ();
