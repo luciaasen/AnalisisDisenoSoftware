@@ -71,7 +71,7 @@ public class Magnitude implements IMagnitude {
 			return unit.getMetricSystem().getConverter(c.getMetricSystem()).transformTo(this,  c);
 		}
 		else{
-			throw new QuantityMagnitudeException(this.getUnit(), c);
+			throw new QuantityException(this.getUnit(), c);
 		}
 	}
 	
