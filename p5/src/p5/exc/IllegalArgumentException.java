@@ -13,7 +13,7 @@ public class IllegalArgumentException extends RuntimeException{
 	
 	
 	public IllegalArgumentException(){
-		System.out.println("No es posible manejar el argumento ");
+		System.out.println("Argumento invalido ");
 	}
 
 }

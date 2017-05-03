@@ -49,8 +49,8 @@ public class Task {
 		t.parent = this;
 		t.dedicated.addObserver(this.dedicated);
 		t.estimated.addObserver(this.estimated);
-		this.estimated.incrementTime(t.estimated.getValue());
-		this.dedicated.incrementTime(t.dedicated.getValue());
+		//this.estimated.incrementTime(t.estimated.getValue());
+		//this.dedicated.incrementTime(t.dedicated.getValue());
 		return true;
 	}
 	
@@ -69,8 +69,8 @@ public class Task {
 			t.parent = null;
 			t.dedicated.removeObserver(this.dedicated);
 			t.estimated.removeObserver(this.estimated);
-			parent.estimated.incrementTime(-1 * t.estimated.getValue());
-			parent.dedicated.incrementTime(-1 * t.dedicated.getValue());
+			//parent.estimated.incrementTime(-1 * t.estimated.getValue());
+			//parent.dedicated.incrementTime(-1 * t.dedicated.getValue());
 			
 			return true;
 		}
@@ -93,6 +93,7 @@ public class Task {
 	public boolean containsTask(Task t){
 		if(this.subtasks.isEmpty()) return false;
 		for(Task subt: this.subtasks){
+			if (subt.equals(t)) return true;
 			if(subt.containsTask(t)) return true;
 		}
 		return false;
@@ -112,7 +113,7 @@ public class Task {
 	 */
 	public void setParent(Task parent){
 		if(parent != null){
-			if (this.containsTask(parent)) throw new IllegalArgumentException();
+			if (this.containsTask(parent)) throw new p5.exc.IllegalArgumentException();
 			/*Esto corta la relacion con el antiguo padre, reajusta tiempos en antiguo padre y pone parent a null, reajusta observers*/
 			this.parent.removeTask(this);
 			/*Esto crea relacion con nuevo parent y añade tiempos al nuevo padre, reajusta observers*/
