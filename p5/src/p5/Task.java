@@ -92,6 +92,7 @@ public class Task {
 	 */
 	public boolean containsTask(Task t){
 		if(this.subtasks.isEmpty()) return false;
+		if(this.equals(t)) return true;
 		for(Task subt: this.subtasks){
 			if (subt.equals(t)) return true;
 			if(subt.containsTask(t)) return true;
