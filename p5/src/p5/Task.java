@@ -114,7 +114,8 @@ public class Task {
 		if(parent != null){
 			if (this.containsTask(parent)) throw new IllegalArgumentException();
 			/*Esto corta la relacion con el antiguo padre, reajusta tiempos en antiguo padre y pone parent a null, reajusta observers*/
-			this.parent.removeTask(this);
+			if(this.parent!=null){
+			this.parent.removeTask(this);}
 			/*Esto crea relacion con nuevo parent y añade tiempos al nuevo padre, reajusta observers*/
 			parent.addTask(this);
 		}
@@ -152,6 +153,9 @@ public class Task {
 	
 	@Override
 	public String toString(){
+		if(this.parent!=null){
+			return this.name + " e: " +this.estimated  + " d: " +this.dedicated+ " Parent: "+this.parent.getName();
+		}
 		return this.name + " e: " +this.estimated  + " d: " +this.dedicated;
 	}
 	

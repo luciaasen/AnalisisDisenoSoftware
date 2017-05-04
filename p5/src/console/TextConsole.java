@@ -45,10 +45,7 @@ public class TextConsole {
 			if(in.equals("")){
 				break;
 			}
-			
-			System.out.println("La linea introducida es: "+ in);
-			
-			
+					
 			//Search for command
 			Boolean found= false;
 			Iterator search = map.entrySet().iterator();
