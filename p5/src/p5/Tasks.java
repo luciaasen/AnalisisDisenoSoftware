@@ -9,6 +9,21 @@ import java.util.Map;
 public class Tasks {
 	private static HashMap<String,Task> tasks= new HashMap<String,Task>();
 	
+		//Singleton
+		private static Tasks sTasks;
+		
+		//Funcion para acceder al singleton
+		public static Tasks getTasksSingleton(){
+			if (Tasks.sTasks==null){
+				Tasks.sTasks= new Tasks();
+			}
+			
+			return Tasks.sTasks;
+		}
+		
+		//Constructor privado
+		private Tasks(){}
+	
 	/**
 	 * If it doesnt exist yet, adds a new task to the Tasks
 	 * @param taskName name of the new task
@@ -43,6 +58,7 @@ public class Tasks {
 		}
 		return null;
 	}
+	
 	public static Iterator getTasks(){
 		Iterator iter = tasks.entrySet().iterator();
 		return iter;
@@ -51,4 +67,6 @@ public class Tasks {
 	public static boolean contains(Task t){
 		return Tasks.tasks.values().contains(t);
 	}
+
+	
 }
