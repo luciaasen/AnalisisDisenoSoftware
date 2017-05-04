@@ -11,14 +11,26 @@ import java.util.StringTokenizer;
 import p5.interf.Function;
 
 
-
+/**
+ * 
+ * @author simon
+ *
+ */
 public class TextConsole {
 	Map<String, Function> map = new HashMap<String, Function>();
 	
+	/**
+	 * Permite añadir comandos a la Consola
+	 * @param str el literal del comando
+	 * @param fun Una implementacion Lambda de la interfaz Function
+	 */
 	public void addCommand(String str, Function fun){
 		map.put(str, fun);
 	}
 	
+	/**
+	 * Imprime por pantalla una lista de los literales de los comandos
+	 */
 	public void displayCommands(){
 		
 		Iterator iter = map.entrySet().iterator();
@@ -28,6 +40,12 @@ public class TextConsole {
 		}
 	}
 	
+	/**
+	 * Ejecuta la Consola. 
+	 * Un enter en blanco finaliza la ejecucion
+	 * Si no se encuentra el comando, se imprimen todos los comandos disponibles
+	 * Si se encuentra el comando, se imprime el literal, los argumentos dados, y se ejecuta el comando
+	 */
 	public void run(){
 		Scanner keyboard = new Scanner(System.in);
 		
