@@ -43,7 +43,7 @@ public abstract class DefaultObservableProperty<V>  implements ObservablePropert
 	}
 	
 	/**
-	 * Removes the observer from de property observers list
+	 * Removes the observer from the property observers list
 	 * @param o the PropertyObserver to remove
 	 */
 	public void removeObserver(PropertyObserver<V> o){
