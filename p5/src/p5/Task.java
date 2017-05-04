@@ -109,7 +109,7 @@ public class Task {
 	
 	/**
 	 * If possible, changes this parent and re-sets old and new parent times and observers
-	 * @param parent
+	 * @param parent the parent of the task
 	 */
 	public void setParent(Task parent){
 		if(parent != null){
